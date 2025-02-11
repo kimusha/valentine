@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Выбор</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin-top: 50px;
+        }
+        button {
+            font-size: 18px;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function sendMessage() {
+            let botToken = "7716322750:AAFIl_v7D_0NdizS1_amKZpUveJofX3nWug"; // Вставь сюда токен бота
+            let chatId = "5209620852"; // Вставь сюда свой Telegram ID
+            let message = "Она согласилась пойти в кино! 🎉";
+
+            fetch(`https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(message)}`)
+                .then(response => {
+                    window.location.href = "https://t.me/K_k_xxsk"; // Ссылка на твой Telegram
+                })
+                .catch(error => {
+                    console.error("Ошибка:", error);
+                    window.location.href = "https://t.me/K_k_xxsk";
+                });
+        }
+    </script>
+</head>
+<body>
+    <h2>Пойдешь со мной на фильм? 🎬</h2>
+    <button onclick="sendMessage()">Да 😊</button>
+    <button onclick="window.location.href='sad.html'">Нет 😢</button>
+</body>
+</html>
