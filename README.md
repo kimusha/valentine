@@ -19,8 +19,8 @@
     </style>
 	<script>
         function sendMessage() {
-            let botToken = "AAFIl_v7D_0NdizS1-amKZpUveJofX3nWug"; //
-            let chatId = "52096208225"; //
+            let botToken = "7716322705:AAFIl_v7D_0NdizS1-amKZpUveJofX3nWug"; //
+            let chatId = "5209620825"; //
             let message = "Она согласилась пойти в кино! 🎉";
 
             fetch(`https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(message)}`)
@@ -35,7 +35,7 @@
     </script>
 </head>
 <body>
-    <h2>Пойдешь со мной на фильм? 🎬</h2>
+    <h2>Нужен человек для секретной миссии: взять попкорн и посмотреть новый фильм. ты в деле? 🎬</h2>
     <button onclick="window.location.href='https://t.me/K_k_xxsk'">Да 😊</button>
     <button onclick="window.location.href='sad.html'">Нет 😢</button>
 </body>
