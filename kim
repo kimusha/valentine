@@ -17,18 +17,23 @@
             cursor: pointer;
         }
     </style>
-    <script>
+    <script charset="UTF-8">
         function sendMessage() {
-            let botToken = "7716322750:AAFIl_v7D_0NdizS1_amKZpUveJofX3nWug"; // Вставь сюда токен бота
-            let chatId = "5209620825"; // Вставь сюда свой Telegram ID
-            let message = "Она согласилась пойти в кино! 🎉";
+            const botToken = "7716322750:AAFIl_v7D_0NdizS1_amKZpUveJofX3nWug"; // Вставь сюда токен бота
+            const chatId = "5209620825"; // Вставь сюда свой Telegram ID
+            const message = "Она согласилась пойти в кино! 🎉";
 
             fetch(`https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(message)}`)
                 .then(response => {
-                    window.location.href = "https://t.me/K_k_xxsk"; // Ссылка на твой Telegram
+                    if (response.ok) {
+                        window.location.href = "https://t.me/K_k_xxsk"; // Ссылка на твой Telegram
+                    } else {
+                        throw new Error('Network response was not ok.');
+                    }
                 })
                 .catch(error => {
                     console.error("Ошибка:", error);
+                    alert("Произошла ошибка при отправке сообщения.");
                     window.location.href = "https://t.me/K_k_xxsk";
                 });
         }
