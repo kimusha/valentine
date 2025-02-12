@@ -39,4 +39,4 @@
     <button onclick="window.location.href='https://t.me/K_k_xxsk'">Да 😊</button>
     <button onclick="window.location.href='sad.html'">Нет 😢</button>
 </body>
-</html>index.html…]()
+</html>
