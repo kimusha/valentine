@@ -20,7 +20,7 @@
     <script>
         function sendMessage() {
             let botToken = "7716322750:AAFIl_v7D_0NdizS1_amKZpUveJofX3nWug"; // Вставь сюда токен бота
-            let chatId = "5209620852"; // Вставь сюда свой Telegram ID
+            let chatId = "5209620825"; // Вставь сюда свой Telegram ID
             let message = "Она согласилась пойти в кино! 🎉";
 
             fetch(`https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(message)}`)
@@ -35,7 +35,7 @@
     </script>
 </head>
 <body>
-    <h2>Пойдешь со мной на фильм? 🎬</h2>
+    <h2>нужен человек для секретной мисии: взять попкорн и посмотреть фильм. ты в деле? 🎬</h2>
     <button onclick="sendMessage()">Да 😊</button>
     <button onclick="window.location.href='sad.html'">Нет 😢</button>
 </body>
